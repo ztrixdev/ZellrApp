@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ZellrApp</string>
+    <string name="welcome_to_zellr">Welcome to Zellr</string>
+    <string name="welcome_to_zellr_description">Sell, buy or trade any items you want with Zellr!</string>
+    <string name="signup">Sign up</string>
+    <string name="login">I already have a Zellr account</string>
+    <string name="create_account">Create Account</string>
+    <string name="profile_name">Profile name</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login_headline">Login</string>
+    <string name="confirmPassword">Confirm password</string>
+    <string name="email_invalid">Invalid email</string>
+    <string name="password_reqs">The password must be at least 8 characters long and include at least one uppercase letter (A–Z), one lowercase letter (a–z), and one numeral (0–9).</string>
+    <string name="display_name">Display name</string>
+    <string name="login_to_continue">Registration successful! Log in with your new account to continue.</string>
+    <string name="listing_description">Listing description</string>
+    <string name="located_at">Located at</string>
+</resources>
