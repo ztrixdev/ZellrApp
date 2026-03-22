@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -57,20 +56,9 @@ import ru.dgis.sdk.map.Zoom
 import ru.dgis.sdk.map.imageFromResource
 import ru.ztrixdev.projects.zellrapp.R
 import ru.ztrixdev.projects.zellrapp.network.data.Listing
-
 @Composable
 fun ListingOverviewScreen(listing: Listing, mapContext: Context) {
-    Scaffold(
-    ) {
-        paddingValues ->
-        Column(modifier = Modifier.padding(paddingValues)) {
-            Gallery(listing.listingPictures)
-            NameAndPrice(name = listing.name, price = listing.price)
-            Spacer(modifier = Modifier.height(16.dp))
-            Description(description = listing.description)
-            //LocatedAt(latitude = listing.location.latitude, longitude =  listing.location.longitude, mapContext = mapContext )
-        }
-    }
+
 
 }
 

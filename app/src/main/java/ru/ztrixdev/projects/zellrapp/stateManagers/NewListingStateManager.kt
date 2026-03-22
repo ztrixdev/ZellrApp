@@ -3,7 +3,7 @@ package ru.ztrixdev.projects.zellrapp.stateManagers
 import androidx.lifecycle.ViewModel
 import ru.ztrixdev.projects.zellrapp.network.dao.ListingDao
 import ru.ztrixdev.projects.zellrapp.network.helpers.ListingHelper.validate
-import ru.ztrixdev.projects.zellrapp.network.data.ListingInsert
+import ru.ztrixdev.projects.zellrapp.network.data.insert.ListingInsert
 
 class NewListingStateManager: ViewModel() {
     suspend fun pushNewListing(listing: ListingInsert): Pair<Boolean, String> {

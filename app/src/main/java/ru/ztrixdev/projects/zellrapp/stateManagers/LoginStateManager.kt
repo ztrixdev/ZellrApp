@@ -5,10 +5,10 @@ import ru.ztrixdev.projects.zellrapp.network.auth.AuthManager
 import ru.ztrixdev.projects.zellrapp.network.auth.AuthResponse
 
 class LoginStateManager() : ViewModel() {
-    suspend fun onSignUpClick(displayName: String, email: String, password: String): Pair<Boolean, String> {
+    suspend fun onSignUpClick( email: String, password: String): Pair<Boolean, String> {
         return try {
             var result: Pair<Boolean, String>? = null
-            AuthManager.signUpWithEmail(displayName, email, password)
+            AuthManager.signUpWithEmail(email, password)
                 .collect { response ->
                     result = when (response) {
                         is AuthResponse.Success -> Pair(true, response.message)

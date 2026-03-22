@@ -10,12 +10,11 @@ import kotlinx.serialization.json.encodeToJsonElement
 import ru.ztrixdev.projects.zellrapp.network.Supabase
 
 object AuthManager {
-    fun signUpWithEmail(displayName: String, email: String, password: String): Flow<AuthResponse> = flow {
+    fun signUpWithEmail(email: String, password: String): Flow<AuthResponse> = flow {
         try {
             val result = Supabase.auth.signUpWith(Email) {
                 this.email = email
                 this.password = password
-                this.data = Json.encodeToJsonElement(mapOf("display_name" to displayName)) as JsonObject?
             }
             emit(AuthResponse.Success("Sign up successful"))
         } catch (e: Exception) {

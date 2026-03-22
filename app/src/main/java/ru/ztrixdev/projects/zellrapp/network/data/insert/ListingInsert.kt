@@ -1,4 +1,4 @@
-package ru.ztrixdev.projects.zellrapp.network.data
+package ru.ztrixdev.projects.zellrapp.network.data.insert
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

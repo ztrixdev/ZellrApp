@@ -17,4 +17,27 @@
     <string name="login_to_continue">Registration successful! Log in with your new account to continue.</string>
     <string name="listing_description">Listing description</string>
     <string name="located_at">Located at</string>
+    <string name="failed_to_upload_image">Failed to upload image</string>
+    <string name="setup_profile_title">Setup profile</string>
+    <string name="profile_creation_success">Profile created successfully!</string>
+    <string name="profile_validation_failed">Profile validation failed! Refill all fields and try again.</string>
+    <string name="profile_creation_failure">Failed to create your profile.</string>
+    <string name="complete_setup">Complete setup</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="upload_photo">Upload photo</string>
+    <string name="back">Back</string>
+    <string name="display_name_placeholder">How should we call you?</string>
+    <string name="display_name_error">3-50 chars, alphanumeric only</string>
+    <string name="bio_label">Bio</string>
+    <string name="bio_placeholder">Tell us a bit about yourself...</string>
+    <string name="bio_error">Too long (max 160 chars)</string>
+    <string name="user_profile_title">User Profile</string>
+    <string name="joined_on">Joined on %s</string>
+    <string name="read_more">Read more...</string>
+    <string name="show_less">Show less</string>
+    <string name="profile_not_found">Profile not found</string>
+    <string name="error">Error: %s</string>
+    <string name="retry">Retry</string>
+    <string name="currency">CN¥</string>
+    <string name="review_count">%s reviews</string>
 </resources>

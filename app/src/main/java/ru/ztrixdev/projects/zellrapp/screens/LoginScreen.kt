@@ -116,9 +116,9 @@ fun LoginScreen(stateManager: LoginStateManager = koinViewModel()) {
                             })
                         }
                         LoginScreenState.SIGNUP -> {
-                            SignUpForm(onSignUpClick = { displayName, email, password ->
+                            SignUpForm(onSignUpClick = {email, password ->
                                 coroutineScope.launch {
-                                    val res = stateManager.onSignUpClick(displayName, email, password)
+                                    val res = stateManager.onSignUpClick(email, password)
                                     if (res.first) {
                                         screenState = LoginScreenState.LOGIN
                                         loginToContinue = true
@@ -139,9 +139,7 @@ enum class LoginScreenState {
 
 
 @Composable
-private fun SignUpForm(onSignUpClick: (String, String, String) -> Unit) {
-    var displayName by remember { mutableStateOf("") }
-
+private fun SignUpForm(onSignUpClick: (String, String) -> Unit) {
     var email by remember { mutableStateOf("") }
     var emailValid by remember { mutableStateOf(false) }
 
@@ -156,12 +154,6 @@ private fun SignUpForm(onSignUpClick: (String, String, String) -> Unit) {
             style = MaterialTheme.typography.titleLarge,
             modifier = Modifier.padding(bottom = 8.dp),
             fontWeight = FontWeight.Bold
-        )
-        ZellrTextField(
-            value = displayName,
-            onValueChange = { displayName = it },
-            label = stringResource(R.string.display_name),
-            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
         )
         ZellrTextField(
             value = email,
@@ -196,12 +188,11 @@ private fun SignUpForm(onSignUpClick: (String, String, String) -> Unit) {
         )
         PrimaryZellrButton(
             text = stringResource(R.string.signup),
-            onClick = { onSignUpClick(displayName, email, password) },
+            onClick = { onSignUpClick(email, password) },
             enabled = (email.isNotBlank()
                     && password.isNotBlank()
                     && (password == confirmPassword)
-                    && (passwordValid && emailValid)
-                    && displayName.isNotBlank())
+                    && (passwordValid && emailValid))
         )
     }
 }

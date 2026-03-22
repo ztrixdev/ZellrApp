@@ -3,7 +3,7 @@ package ru.ztrixdev.projects.zellrapp.network.helpers
 import ru.ztrixdev.projects.zellrapp.network.BACKEND_SERVICE_HOSTNAME
 import ru.ztrixdev.projects.zellrapp.network.buckets.BucketHelper
 import ru.ztrixdev.projects.zellrapp.network.buckets.ListingPicturesBucket
-import ru.ztrixdev.projects.zellrapp.network.data.ListingInsert
+import ru.ztrixdev.projects.zellrapp.network.data.insert.ListingInsert
 
 object ListingHelper {
     enum class ListingProblems {
